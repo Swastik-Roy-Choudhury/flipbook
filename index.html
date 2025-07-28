@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="png" href="public/shortcut3.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swastik Roy Choudhury Book Slider</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+        // Disable Ctrl key actions and F12
+        document.addEventListener("keydown", function (event){
+            if (event.ctrlKey){
+                event.preventDefault();
+            }
+            if(event.keyCode === 123){ // F12 key
+                event.preventDefault();
+            }
+        });
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+  </body>
+</html>
